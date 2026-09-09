@@ -1,0 +1,224 @@
+==================================================
+PREGUNTAS FRECUENTES - VETCARE
+==================================================
+
+AVISO IMPORTANTE
+
+VetCare es una clínica veterinaria ficticia creada para un proyecto
+académico. Los datos de contacto, horarios y políticas son simulados.
+
+==================================================
+1. ¿CÓMO PUEDO SOLICITAR UNA HORA?
+==================================================
+
+Puedes solicitar una hora mediante los siguientes canales:
+
+- Llamando al teléfono general: +56 2 2987 6543.
+- Enviando un correo a contacto@vetcarechile.cl.
+- Acudiendo a la recepción ubicada en Av. Providencia 1234,
+  Providencia, Santiago.
+
+Al solicitar una hora por correo, debes indicar:
+
+- Motivo general de la consulta.
+- Especie de la mascota.
+- Día u horario de preferencia.
+- Medio de contacto.
+
+La solicitud no significa que la hora esté confirmada. La clínica debe
+confirmar la disponibilidad.
+
+El chatbot puede mostrar los horarios simulados disponibles, pero no puede
+realizar reservas.
+
+==================================================
+2. ¿QUÉ DEBO LLEVAR A LA CONSULTA?
+==================================================
+
+Se recomienda llevar:
+
+- Carné de vacunación de la mascota.
+- Historial médico o ficha veterinaria anterior.
+- Identificación del tutor adulto responsable.
+- Exámenes anteriores recientes, si corresponde a un seguimiento o
+  una segunda opinión.
+- Correa para los perros.
+- Bozal cuando el perro presente riesgo de mordida o sea de manejo complejo.
+- Canil o transportadora cerrada para gatos y animales exóticos.
+
+==================================================
+3. ¿ATIENDEN SIN RESERVA?
+==================================================
+
+Consultas generales y servicios programados:
+
+Requieren una reserva previa para garantizar la atención.
+
+Esto incluye:
+
+- Vacunación.
+- Desparasitación.
+- Controles.
+- Exámenes programados.
+- Cirugías electivas.
+- Peluquería.
+- Consultas con especialistas.
+
+Urgencias:
+
+Se atienden sin reserva las 24 horas del día.
+
+Al ingresar, el equipo veterinario realizará una evaluación mediante
+triaje para determinar el nivel de prioridad clínica.
+
+==================================================
+4. ¿QUÉ ANIMALES RECIBEN?
+==================================================
+
+VetCare atiende regularmente:
+
+- Perros.
+- Gatos.
+
+También recibe, con reserva previa con la especialista:
+
+- Conejos.
+- Cobayas.
+- Hurones.
+- Aves pequeñas.
+
+VetCare no atiende:
+
+- Animales de granja.
+- Reptiles venenosos.
+- Animales silvestres.
+- Especies protegidas.
+
+==================================================
+5. ¿CÓMO PREPARO A MI MASCOTA ANTES DE IR?
+==================================================
+
+Mantener la calma:
+
+Las mascotas pueden percibir el estrés de sus tutores. Se recomienda
+hablarles con tranquilidad y realizar el traslado de forma segura.
+
+Ayuno:
+
+No retires alimentos ni agua sin haber recibido previamente instrucciones
+específicas de la clínica.
+
+La necesidad y duración del ayuno depende de:
+
+- La especie.
+- La edad.
+- El estado de salud.
+- El tipo de examen.
+- El procedimiento que se realizará.
+
+Si no recibiste instrucciones sobre el ayuno, comunícate con la clínica
+antes de la atención.
+
+Traslado de perros:
+
+- Utiliza una correa segura.
+- Usa bozal si existe riesgo de mordida o si fue indicado por el personal.
+
+Traslado de gatos:
+
+- Utiliza siempre una transportadora cerrada.
+- Puedes colocar dentro una manta con el olor habitual de la mascota.
+- No transportes al gato suelto o solamente en brazos.
+
+Traslado de animales exóticos:
+
+- Usa una transportadora adecuada para la especie.
+- Evita cambios bruscos de temperatura.
+- Sigue las instrucciones entregadas por la clínica.
+
+==================================================
+6. ¿QUÉ OCURRE SI LLEGO ATRASADO?
+==================================================
+
+VetCare cuenta con una tolerancia máxima de 10 minutos.
+
+Si el atraso supera ese tiempo:
+
+- Se intentará reacomodar la atención según la disponibilidad.
+- Se puede ofrecer una nueva hora.
+- No se garantiza que la mascota pueda ser atendida en el horario original.
+
+Esta política busca evitar atrasos en la atención de los pacientes siguientes.
+
+==================================================
+7. ¿CUÁLES SON LOS MEDIOS DE CONTACTO?
+==================================================
+
+Teléfono general y reserva de horas:
++56 2 2987 6543.
+
+Teléfono de urgencias 24/7:
++56 9 8765 4321.
+
+Correo electrónico:
+contacto@vetcarechile.cl.
+
+Dirección:
+Av. Providencia 1234, Providencia, Santiago, Chile.
+
+Todos estos datos son simulados y se utilizan exclusivamente para este
+proyecto académico.
+
+==================================================
+8. ¿EL CHATBOT PUEDE DIAGNOSTICAR A MI MASCOTA?
+==================================================
+
+No.
+
+El chatbot no puede diagnosticar enfermedades, interpretar exámenes,
+recetar medicamentos ni recomendar dosis.
+
+Puede entregar información general disponible en los documentos y orientar
+al usuario para que solicite una consulta o acuda a urgencias.
+
+==================================================
+9. ¿EL CHATBOT PUEDE RESERVAR UNA HORA?
+==================================================
+
+No.
+
+El chatbot solamente puede mostrar la agenda simulada registrada en la
+base de conocimiento.
+
+La reserva debe confirmarse directamente con la clínica mediante teléfono,
+correo electrónico o atención presencial.
+
+==================================================
+10. ¿QUÉ OCURRE SI HAGO UNA PREGUNTA DE OTRO TEMA?
+==================================================
+
+El asistente está diseñado exclusivamente para responder consultas
+relacionadas con:
+
+- VetCare.
+- Sus horarios.
+- Sus servicios.
+- Su agenda.
+- Normas de atención.
+- Cuidados generales de mascotas.
+- Orientación incluida en el protocolo de urgencias.
+
+Si recibe una pregunta sobre programación, política, deportes u otro tema
+sin relación con VetCare, debe responder:
+
+“Solo puedo ayudarte con información relacionada con VetCare y el cuidado
+general de las mascotas disponible en mi base de conocimiento.”
+
+==================================================
+INFORMACIÓN DEL DOCUMENTO
+==================================================
+
+Tipo de fuente: Preguntas frecuentes internas simuladas.
+Fecha de elaboración: 8 de septiembre de 2026.
+Última actualización: 8 de septiembre de 2026.
+Uso: Proyecto académico de chatbot veterinario con RAG.

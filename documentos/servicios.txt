@@ -1,0 +1,227 @@
+==================================================
+CATÁLOGO DE SERVICIOS MÉDICOS Y COMPLEMENTARIOS
+VETCARE
+==================================================
+
+AVISO IMPORTANTE
+
+VetCare es una clínica veterinaria ficticia creada para un proyecto
+académico. Los servicios descritos son datos simulados y no representan
+la oferta real de una clínica veterinaria.
+
+La disponibilidad de cada servicio debe confirmarse mediante los canales
+de contacto de VetCare.
+
+==================================================
+1. CONSULTA VETERINARIA
+==================================================
+
+Descripción:
+
+Servicio de evaluación presencial realizado por un médico veterinario.
+Incluye una revisión física general y una orientación clínica inicial.
+
+Tipos de consulta:
+
+- Consulta general de rutina.
+- Consulta por enfermedad o malestar.
+- Control de seguimiento.
+- Consulta de dermatología.
+- Consulta de cardiología.
+- Consulta de oncología.
+- Consulta de animales exóticos autorizados.
+
+Las consultas programadas requieren una reserva previa.
+
+El diagnóstico y el tratamiento solamente pueden ser determinados por
+un médico veterinario después de evaluar presencialmente al paciente.
+
+==================================================
+2. VACUNACIÓN Y PLANES SANITARIOS
+==================================================
+
+Descripción:
+
+Aplicación de vacunas y planificación preventiva de acuerdo con la especie,
+edad, antecedentes médicos, estilo de vida y nivel de exposición de la mascota.
+
+Vacunas disponibles para perros:
+
+- Vacuna óctuple.
+- Vacuna antirrábica.
+- Vacuna KC o tos de las perreras.
+
+Vacunas disponibles para gatos:
+
+- Vacuna triple felina.
+- Vacuna contra la leucemia felina, con evaluación o test previo cuando
+  corresponda.
+- Vacuna antirrábica.
+
+La vacuna y su frecuencia deben ser indicadas por un médico veterinario.
+El chatbot no puede establecer calendarios individuales de vacunación.
+
+==================================================
+3. CONTROL PREVENTIVO
+==================================================
+
+Descripción:
+
+Chequeo presencial destinado a revisar el estado general de la mascota
+y detectar de manera temprana posibles alteraciones de salud.
+
+Puede incluir:
+
+- Evaluación general.
+- Evaluación nutricional.
+- Control del peso.
+- Revisión odontológica básica.
+- Control pediátrico.
+- Control de mascotas adultas.
+- Programa de seguimiento para mascotas de edad avanzada.
+
+La frecuencia de los controles debe ser establecida por un profesional
+según las características de cada mascota.
+
+==================================================
+4. DESPARASITACIÓN
+==================================================
+
+Descripción:
+
+Servicio preventivo o de tratamiento contra parásitos internos y externos.
+
+Desparasitación interna:
+
+Puede incluir productos veterinarios para el control de parásitos
+gastrointestinales.
+
+Desparasitación externa:
+
+Puede incluir productos veterinarios para el control de:
+
+- Pulgas.
+- Garrapatas.
+- Ácaros.
+
+El producto, frecuencia y cantidad deben ser determinados por un médico
+veterinario según la especie, edad, peso, entorno y estado de salud.
+
+El chatbot no puede recomendar marcas, productos ni dosis de antiparasitarios.
+
+==================================================
+5. CIRUGÍA VETERINARIA
+==================================================
+
+Descripción:
+
+Procedimientos quirúrgicos realizados en un pabellón veterinario equipado
+con anestesia inhalatoria y monitoreo multiparámetro.
+
+Cirugías programadas:
+
+- Esterilización de machos.
+- Esterilización de hembras.
+- Procedimientos odontológicos programados.
+- Cirugías de tejidos blandos.
+
+Cirugías médicas y de urgencia:
+
+- Tratamiento quirúrgico de heridas.
+- Procedimientos gastrointestinales de emergencia.
+- Cirugías derivadas de traumatismos.
+- Otros procedimientos determinados por el equipo veterinario.
+
+Toda cirugía requiere una evaluación presencial. Los exámenes previos,
+el ayuno y los cuidados posteriores deben ser indicados directamente
+por el equipo médico.
+
+==================================================
+6. EXÁMENES DIAGNÓSTICOS Y LABORATORIO
+==================================================
+
+Laboratorio clínico:
+
+- Hemograma.
+- Perfil bioquímico.
+- Examen de orina.
+- Examen coproparasitológico.
+- Test de leucemia y virus de inmunodeficiencia felina.
+- Test de parvovirus.
+- Test de distemper o moquillo canino.
+
+Imagenología:
+
+- Radiografía digital.
+- Ecografía abdominal.
+- Ecografía cardiaca.
+
+Los exámenes programados requieren reserva previa.
+
+En una urgencia, la necesidad de realizar exámenes será determinada
+por el equipo veterinario.
+
+El chatbot no interpreta resultados de exámenes ni entrega diagnósticos.
+
+==================================================
+7. PELUQUERÍA CANINA Y FELINA
+==================================================
+
+Descripción:
+
+Servicio complementario de higiene y cuidado estético para perros y gatos.
+
+Puede incluir:
+
+- Baño sanitario.
+- Baño cosmético.
+- Corte de pelo.
+- Cepillado.
+- Corte de uñas.
+- Limpieza externa de oídos.
+
+Condiciones:
+
+- Requiere reserva previa.
+- La mascota debe contar con su esquema sanitario al día según la
+  indicación de su veterinario.
+- No está disponible como atención de urgencia.
+- Si la mascota presenta heridas, dolor, secreciones o problemas de piel,
+  debe ser evaluada por un médico veterinario antes del servicio.
+
+==================================================
+8. ATENCIÓN DE URGENCIA 24/7
+==================================================
+
+Descripción:
+
+Servicio de atención inmediata para pacientes que presentan una condición
+grave o posible riesgo vital.
+
+Puede incluir:
+
+- Evaluación de urgencia.
+- Estabilización inicial.
+- Fluidoterapia.
+- Oxigenoterapia.
+- Manejo profesional del dolor.
+- Exámenes de urgencia.
+- Cirugía de urgencia.
+- Derivación a hospitalización.
+
+Disponibilidad:
+
+- Las 24 horas del día.
+- Los 365 días del año.
+- No requiere reserva previa.
+
+Las mascotas son clasificadas mediante triaje según su nivel de gravedad.
+
+==================================================
+INFORMACIÓN DEL DOCUMENTO
+==================================================
+
+Tipo de fuente: Catálogo interno simulado.
+Fecha de elaboración: 8 de septiembre de 2026.
+Última actualización: 8 de septiembre de 2026.
+Uso: Proyecto académico de chatbot veterinario con RAG.

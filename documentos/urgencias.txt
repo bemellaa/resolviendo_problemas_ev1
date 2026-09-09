@@ -1,0 +1,234 @@
+==================================================
+PROTOCOLO Y ATENCIÓN DE URGENCIAS MÉDICAS
+VETCARE
+==================================================
+
+AVISO IMPORTANTE
+
+Este documento contiene orientación general para reconocer posibles
+situaciones de urgencia.
+
+No reemplaza la evaluación presencial de un médico veterinario.
+
+Ante una posible urgencia, comunícate inmediatamente con el servicio
+veterinario y traslada a la mascota a un centro de atención.
+
+==================================================
+1. SEÑALES DE POSIBLE URGENCIA
+==================================================
+
+Se debe buscar atención veterinaria inmediata si la mascota presenta
+alguna de las siguientes situaciones:
+
+Dificultad respiratoria:
+
+- Respiración muy rápida o dificultosa.
+- Jadeo excesivo sin causa aparente.
+- Encías pálidas o azuladas.
+- Sonidos anormales al respirar.
+- Incapacidad para mantenerse tranquila debido a la falta de aire.
+
+Traumatismos:
+
+- Atropello.
+- Caída desde una altura.
+- Golpe fuerte.
+- Heridas profundas.
+- Sangrado abundante.
+- Sospecha de fractura.
+- Incapacidad para caminar después de un accidente.
+
+Alteraciones neurológicas:
+
+- Convulsiones.
+- Pérdida de conocimiento.
+- Desorientación severa.
+- Colapso.
+- Falta de respuesta.
+
+Posible intoxicación:
+
+- Ingesta de veneno.
+- Ingesta de medicamentos humanos.
+- Ingesta de productos de limpieza.
+- Ingesta de alimentos potencialmente tóxicos.
+- Ingesta de plantas peligrosas.
+- Contacto con sustancias químicas.
+
+Problemas abdominales o digestivos:
+
+- Distensión abdominal repentina.
+- Intentos repetidos de vomitar sin conseguirlo.
+- Vómitos continuos.
+- Diarrea intensa y continua.
+- Vómitos o deposiciones con sangre.
+- Dolor abdominal intenso.
+
+Problemas urinarios:
+
+- Incapacidad para orinar.
+- Intentos repetidos de orinar sin resultado.
+- Dolor intenso al intentar orinar.
+- Presencia visible de sangre en la orina.
+
+La dificultad para orinar requiere atención rápida, especialmente en gatos.
+
+Ingesta de objetos:
+
+- Juguetes.
+- Hilos.
+- Anzuelos.
+- Huesos.
+- Telas.
+- Plásticos.
+- Otros cuerpos extraños.
+
+==================================================
+2. QUÉ HACER ANTE UNA POSIBLE URGENCIA
+==================================================
+
+Ante cualquiera de las situaciones anteriores:
+
+1. Mantén la calma.
+2. Aleja a la mascota del peligro si puedes hacerlo de manera segura.
+3. Comunícate inmediatamente con el servicio de urgencias.
+4. Describe brevemente lo ocurrido y los signos observados.
+5. Sigue las instrucciones del personal veterinario.
+6. Traslada a la mascota a la clínica sin demora.
+7. Utiliza una forma de transporte segura.
+8. Lleva el envase o una fotografía del producto ingerido, si corresponde.
+
+La mascota necesita una evaluación veterinaria profesional. No se debe
+postergar la atención esperando que los síntomas desaparezcan por sí solos.
+
+==================================================
+3. QUÉ NO HACER
+==================================================
+
+Durante una posible urgencia:
+
+- No administres medicamentos humanos.
+- No utilices medicamentos veterinarios de tratamientos anteriores.
+- No entregues remedios caseros.
+- No recomiendes ni calcules dosis.
+- No provoques el vómito sin indicación profesional.
+- No obligues a la mascota a comer o beber.
+- No introduzcas objetos en su boca durante una convulsión.
+- No intentes retirar un objeto clavado profundamente.
+- No retrases el traslado para consultar únicamente al chatbot.
+
+==================================================
+4. PROHIBICIÓN DE AUTOMEDICACIÓN
+==================================================
+
+No administres medicamentos humanos, remedios caseros ni medicamentos
+veterinarios sobrantes sin una indicación actual de un médico veterinario.
+
+Algunos medicamentos humanos, como paracetamol, ibuprofeno, aspirina
+y otros analgésicos, pueden provocar intoxicaciones graves según la
+especie, cantidad ingerida y estado de salud de la mascota.
+
+Si una mascota consumió accidentalmente un medicamento:
+
+- Comunícate inmediatamente con urgencias.
+- Informa el nombre del medicamento.
+- Informa la concentración indicada en el envase.
+- Informa la cantidad aproximada ingerida.
+- Informa la hora aproximada de la ingesta.
+- Lleva el envase a la consulta.
+- No esperes a que aparezcan síntomas.
+- No provoques el vómito sin indicación profesional.
+
+El chatbot no debe indicar tratamientos, medicamentos ni dosis.
+
+==================================================
+5. TRANSPORTE SEGURO
+==================================================
+
+Perros:
+
+- Utiliza una correa.
+- Evita movimientos innecesarios si existe un posible traumatismo.
+- Usa bozal solamente si es seguro y no presenta dificultad respiratoria
+  o vómitos.
+
+Gatos:
+
+- Utiliza una transportadora cerrada.
+- Evita perseguir o sujetar bruscamente al animal.
+- Mantén la transportadora estable durante el viaje.
+
+Animales lesionados:
+
+- Manipúlalos con precaución.
+- Una mascota con dolor puede intentar morder o arañar.
+- No realices movimientos innecesarios si sospechas una fractura o lesión
+  de columna.
+- Sigue las instrucciones entregadas por el personal de urgencias.
+
+==================================================
+6. HORARIO Y CONTACTO DE URGENCIAS
+==================================================
+
+Horario:
+
+- Atención disponible las 24 horas.
+- Atención disponible los 365 días del año.
+- Incluye domingos y festivos.
+- No requiere reserva previa.
+
+Teléfono directo de urgencias 24/7:
++56 9 8765 4321.
+
+Teléfono central:
++56 2 2987 6543.
+
+Dirección:
+Av. Providencia 1234, Providencia, Santiago, Chile.
+
+Todos estos datos son simulados y se utilizan exclusivamente para el
+proyecto académico.
+
+==================================================
+7. RESPUESTA QUE DEBE ENTREGAR EL CHATBOT
+==================================================
+
+Si el usuario describe una señal incluida en este protocolo, el chatbot
+debe:
+
+- Indicar que puede tratarse de una urgencia.
+- Recomendar atención veterinaria inmediata.
+- Mostrar el teléfono de urgencias simulado.
+- Mostrar la dirección simulada.
+- Recordar que no debe administrar medicamentos.
+- Evitar entregar un diagnóstico.
+- Evitar recomendar tratamientos o dosis.
+
+Ejemplo de respuesta:
+
+“Los signos que describes pueden requerir atención veterinaria urgente.
+No puedo realizar un diagnóstico ni recomendar medicamentos. Comunícate
+inmediatamente con urgencias de VetCare al +56 9 8765 4321 y traslada
+a tu mascota a Av. Providencia 1234, Providencia. No le administres
+medicamentos ni provoques el vómito sin indicación profesional.”
+
+==================================================
+FUENTES EXTERNAS DE REFERENCIA
+==================================================
+
+U.S. Food and Drug Administration, FDA.
+Información sobre medicamentos y analgésicos para mascotas:
+https://www.fda.gov/consumers/consumer-updates/get-facts-about-pain-relievers-pets
+
+American Society for the Prevention of Cruelty to Animals, ASPCA.
+Información sobre alimentos y sustancias peligrosas para mascotas:
+https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets
+
+==================================================
+INFORMACIÓN DEL DOCUMENTO
+==================================================
+
+Tipo de fuente: Protocolo interno simulado con referencias externas.
+Fecha de elaboración: 8 de septiembre de 2026.
+Última actualización: 8 de septiembre de 2026.
+Uso: Proyecto académico de chatbot veterinario con RAG.

@@ -1,0 +1,216 @@
+==================================================
+AGENDA Y HORARIOS DISPONIBLES DE ATENCIÓN
+VETCARE
+==================================================
+
+AVISO IMPORTANTE
+
+Los siguientes horarios son datos simulados para fines académicos.
+No representan la disponibilidad real de una clínica veterinaria.
+
+Última actualización de la agenda:
+8 de septiembre de 2026.
+
+El chatbot solamente puede informar los horarios registrados en este
+documento. No puede reservar, modificar, cancelar ni garantizar una hora.
+
+Toda hora debe confirmarse por teléfono, correo electrónico o directamente
+en la recepción de VetCare.
+
+==================================================
+HORARIOS DISPONIBLES
+==================================================
+
+REGISTRO 001
+
+Fecha: 15 de septiembre de 2026
+Hora: 10:00
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 002
+
+Fecha: 15 de septiembre de 2026
+Hora: 11:30
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 003
+
+Fecha: 15 de septiembre de 2026
+Hora: 16:00
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 004
+
+Fecha: 15 de septiembre de 2026
+Hora: 09:00
+Profesional: Dra. Ana Silva
+Especialidad: Dermatología y especies exóticas
+Servicio: Consulta especializada
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 005
+
+Fecha: 15 de septiembre de 2026
+Hora: 14:30
+Profesional: Dra. Ana Silva
+Especialidad: Dermatología y especies exóticas
+Servicio: Consulta especializada
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 006
+
+Fecha: 15 de septiembre de 2026
+Hora: 17:00
+Profesional: Dra. Ana Silva
+Especialidad: Dermatología y especies exóticas
+Servicio: Consulta especializada
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 007
+
+Fecha: 16 de septiembre de 2026
+Hora: 09:30
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 008
+
+Fecha: 16 de septiembre de 2026
+Hora: 12:00
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 009
+
+Fecha: 16 de septiembre de 2026
+Hora: 15:30
+Profesional: Dr. Carlos Mendoza
+Especialidad: Consulta general
+Servicio: Consulta veterinaria
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 010
+
+Fecha: 16 de septiembre de 2026
+Hora: 11:00
+Profesional: Dra. María Gómez
+Especialidad: Control preventivo y vacunación
+Servicio: Control preventivo
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 011
+
+Fecha: 16 de septiembre de 2026
+Hora: 16:30
+Profesional: Dra. María Gómez
+Especialidad: Control preventivo y vacunación
+Servicio: Vacunación
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 012
+
+Fecha: 16 de septiembre de 2026
+Hora: 18:00
+Profesional: Dra. María Gómez
+Especialidad: Control preventivo y vacunación
+Servicio: Control preventivo
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 013
+
+Fecha: 17 de septiembre de 2026
+Hora: 10:00
+Profesional: Servicio de Estética y Grooming
+Especialidad: Peluquería y baño sanitario
+Servicio: Peluquería
+Estado: Disponible
+Tipo de dato: Simulado
+
+--------------------------------------------------
+
+REGISTRO 014
+
+Fecha: 17 de septiembre de 2026
+Hora: 15:00
+Profesional: Servicio de Estética y Grooming
+Especialidad: Peluquería y baño sanitario
+Servicio: Peluquería
+Estado: Disponible
+Tipo de dato: Simulado
+
+==================================================
+INSTRUCCIONES PARA RESERVAR
+==================================================
+
+Para solicitar una de las horas disponibles, el usuario debe comunicarse
+mediante alguno de estos canales simulados:
+
+Teléfono general:
++56 2 2987 6543
+
+Correo electrónico:
+contacto@vetcarechile.cl
+
+Atención presencial:
+Av. Providencia 1234, Providencia, Santiago, Chile.
+
+La disponibilidad puede cambiar. El chatbot no debe afirmar que una hora
+quedó reservada ni solicitar información médica privada del usuario.
+
+==================================================
+INFORMACIÓN DEL DOCUMENTO
+==================================================
+
+Tipo de fuente: Agenda interna simulada.
+Fecha de elaboración: 8 de septiembre de 2026.
+Última actualización: 8 de septiembre de 2026.
+Uso: Proyecto académico de chatbot veterinario con RAG.

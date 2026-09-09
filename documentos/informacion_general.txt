@@ -1,0 +1,208 @@
+==================================================
+INFORMACIÓN GENERAL Y NORMATIVA DE ATENCIÓN - VETCARE
+==================================================
+
+AVISO IMPORTANTE
+
+VetCare es una clínica veterinaria ficticia creada exclusivamente para
+el desarrollo de un proyecto académico.
+
+La dirección, los teléfonos, el correo electrónico, los profesionales,
+los servicios y los horarios indicados en este documento corresponden
+a datos simulados.
+
+Este asistente virtual entrega información general basada únicamente
+en los documentos del proyecto. No reemplaza la evaluación presencial
+de un médico veterinario.
+
+==================================================
+1. DATOS DE CONTACTO Y UBICACIÓN
+==================================================
+
+Nombre: Clínica Veterinaria VetCare
+
+Dirección:
+Av. Providencia 1234, Providencia, Santiago, Chile.
+Dato simulado para fines académicos.
+
+Teléfono general y reserva de horas:
++56 2 2987 6543.
+Dato simulado para fines académicos.
+
+Teléfono exclusivo de urgencias 24/7:
++56 9 8765 4321.
+Dato simulado para fines académicos.
+
+Correo electrónico:
+contacto@vetcarechile.cl.
+Dato simulado para fines académicos.
+
+==================================================
+2. HORARIOS DE ATENCIÓN
+==================================================
+
+Consultas generales, controles y servicios programados:
+
+- Lunes a viernes: desde las 08:30 hasta las 19:30 horas.
+- Sábados: desde las 09:00 hasta las 14:00 horas.
+- Domingos y festivos: cerrado para consultas programadas.
+
+Atención de urgencias:
+
+- Disponible las 24 horas del día.
+- Disponible los 365 días del año.
+- Incluye domingos y días festivos.
+- Las urgencias no requieren una reserva previa.
+
+==================================================
+3. ANIMALES ATENDIDOS
+==================================================
+
+Atención regular:
+
+- Perros de todas las razas y edades.
+- Gatos de todas las razas y edades.
+
+Atención de animales exóticos con reserva previa:
+
+- Conejos.
+- Cobayas.
+- Hurones.
+- Aves pequeñas.
+
+La atención de animales exóticos requiere una reserva previa con la
+profesional especialista.
+
+Animales no atendidos:
+
+- Animales de granja, como vacas, caballos y cerdos.
+- Reptiles venenosos.
+- Animales silvestres.
+- Especies protegidas por la legislación vigente.
+
+Si el animal no se encuentra dentro de las especies atendidas, se debe
+consultar con un centro veterinario especializado.
+
+==================================================
+4. MODALIDADES DE ATENCIÓN
+==================================================
+
+ATENCIÓN NORMAL O PROGRAMADA
+
+Requiere una reserva previa mediante teléfono, correo electrónico o
+atención presencial en la recepción.
+
+Se utiliza para:
+
+- Consultas generales.
+- Vacunación.
+- Desparasitación.
+- Controles preventivos.
+- Controles de seguimiento.
+- Exámenes de rutina.
+- Cirugías programadas.
+- Peluquería canina y felina.
+- Consultas con especialistas.
+
+ATENCIÓN DE URGENCIA
+
+No requiere una reserva previa.
+
+Al llegar a la clínica, el paciente será evaluado mediante un sistema
+de triaje veterinario. Este sistema permite ordenar la atención según
+la gravedad y el riesgo vital de cada mascota.
+
+Por esta razón, el orden de atención en urgencias no depende
+necesariamente del orden de llegada.
+
+==================================================
+5. RESTRICCIONES MÉDICAS
+==================================================
+
+La clínica establece las siguientes restricciones para la atención
+mediante llamadas, mensajería o asistentes virtuales:
+
+- No se entregan diagnósticos clínicos a distancia.
+- No se emiten recetas médicas mediante el chatbot.
+- No se recomiendan dosis de medicamentos.
+- No se indica iniciar, suspender o modificar tratamientos.
+- No se venden medicamentos bajo receta sin una evaluación veterinaria.
+- No se reemplaza la consulta presencial con un médico veterinario.
+
+El asistente puede entregar información general, identificar señales
+descritas en el protocolo de urgencias y orientar al usuario para que
+se comunique o traslade a la clínica.
+
+==================================================
+6. PROTOCOLOS DE SEGURIDAD PARA EL INGRESO
+==================================================
+
+Perros:
+
+- Todos los perros deben ingresar con correa.
+- Los perros con riesgo de mordida, antecedentes de agresividad o manejo
+  complejo deben utilizar bozal.
+- El tutor debe mantener el control de la mascota durante la permanencia
+  en las instalaciones.
+
+Gatos:
+
+- Todos los gatos deben ingresar en un canil o transportadora cerrada.
+- No se permite el ingreso de gatos sueltos o solamente en brazos.
+
+Animales exóticos:
+
+- Deben ingresar en una transportadora adecuada para su especie.
+- La transportadora debe permitir un traslado seguro y reducir el riesgo
+  de escape.
+
+Acompañantes:
+
+- Se permite el ingreso de un máximo de un adulto por mascota a la sala
+  de consulta.
+- Los acompañantes deben respetar las indicaciones del personal de la clínica.
+
+==================================================
+7. ALCANCE DEL ASISTENTE VIRTUAL
+==================================================
+
+El asistente virtual VetCare puede responder preguntas relacionadas con:
+
+- Horarios de atención.
+- Datos de contacto.
+- Dirección de la clínica.
+- Servicios disponibles.
+- Especies atendidas.
+- Horas simuladas disponibles.
+- Requisitos para asistir a una consulta.
+- Cuidados generales incluidos en la base de conocimiento.
+- Señales de urgencia incluidas en el protocolo.
+- Normas de ingreso y seguridad.
+
+El asistente virtual no puede:
+
+- Confirmar una reserva real.
+- Modificar o cancelar una hora.
+- Diagnosticar enfermedades.
+- Recetar medicamentos.
+- Recomendar dosis.
+- Interpretar exámenes médicos.
+- Reemplazar la atención profesional.
+- Responder preguntas que no estén relacionadas con VetCare o el cuidado
+  general de las mascotas.
+
+Cuando la información solicitada no se encuentre en los documentos,
+el asistente debe responder:
+
+“No tengo información suficiente en la base de conocimiento de VetCare
+para responder esa consulta. Te recomiendo comunicarte directamente
+con la clínica.”
+
+==================================================
+INFORMACIÓN DEL DOCUMENTO
+==================================================
+
+Tipo de fuente: Información interna simulada.
+Fecha de elaboración: 8 de septiembre de 2026.
+Última actualización: 8 de septiembre de 2026.
+Uso: Proyecto académico de chatbot veterinario con RAG.
