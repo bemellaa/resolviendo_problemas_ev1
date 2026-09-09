@@ -1,0 +1,82 @@
+==================================================
+FUENTE EXTERNA - ALIMENTOS POTENCIALMENTE TÓXICOS
+PARA PERROS Y GATOS
+==================================================
+
+Tipo de fuente: Externa
+Organización responsable: ASPCA
+Uso: Prototipo académico VetCare
+
+AVISO IMPORTANTE
+
+Esta información es preventiva y general. No permite diagnosticar,
+prescribir tratamientos ni determinar la gravedad de una intoxicación.
+Ante una ingesta sospechosa se debe contactar inmediatamente a un
+médico veterinario.
+
+==================================================
+ALIMENTOS Y PRODUCTOS QUE DEBEN EVITARSE
+==================================================
+
+Chocolate, café y cafeína:
+
+El chocolate, el café y otros productos con cafeína pueden provocar
+intoxicaciones en perros y gatos. El nivel de riesgo depende del producto,
+la cantidad ingerida y las características de la mascota.
+
+Uvas y pasas:
+
+Las uvas y pasas pueden causar problemas graves en algunos animales.
+No deben ofrecerse como alimento ni utilizarse como premio.
+
+Cebolla, ajo y cebollín:
+
+Estos alimentos pueden producir alteraciones en los glóbulos rojos de
+perros y gatos. Deben evitarse tanto crudos como cocidos o incorporados
+en preparaciones.
+
+Xilitol:
+
+El xilitol es un edulcorante presente en algunos productos sin azúcar,
+como dulces, chicles, alimentos horneados y productos de higiene dental.
+Puede ser peligroso para los perros.
+
+Alcohol y masas con levadura:
+
+Las bebidas alcohólicas y productos que contienen alcohol no deben ser
+consumidos por mascotas. Las masas crudas con levadura también pueden
+representar un riesgo.
+
+Nueces de macadamia:
+
+Las nueces de macadamia pueden producir efectos adversos en perros y no
+deben incluirse en su alimentación.
+
+==================================================
+QUÉ HACER ANTE UNA INGESTA SOSPECHOSA
+==================================================
+
+- Retira el producto del alcance de la mascota.
+- Conserva el envase o fotografía sus ingredientes.
+- Registra el nombre del producto.
+- Registra la cantidad aproximada ingerida.
+- Registra la hora aproximada de la ingesta.
+- Comunícate inmediatamente con un médico veterinario.
+- No provoques el vómito sin indicación profesional.
+- No administres medicamentos ni remedios caseros.
+
+El chatbot debe limitarse a entregar estas medidas preventivas y recomendar
+atención profesional. No puede calcular niveles de toxicidad ni asegurar
+que una mascota se encuentra fuera de peligro.
+
+==================================================
+REFERENCIA
+==================================================
+
+Título: People Foods to Avoid Feeding Your Pets
+Institución: American Society for the Prevention of Cruelty to Animals
+Sigla: ASPCA
+URL:
+https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets
+
+Fecha de consulta: 9 de septiembre de 2026

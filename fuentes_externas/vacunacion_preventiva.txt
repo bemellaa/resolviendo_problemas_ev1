@@ -1,0 +1,98 @@
+==================================================
+FUENTE EXTERNA - PRINCIPIOS GENERALES DE
+VACUNACIÓN PARA PERROS Y GATOS
+==================================================
+
+Tipo de fuente: Externa
+Organización responsable: WSAVA
+Uso: Prototipo académico VetCare
+Documento de referencia: Guías de vacunación 2024
+
+AVISO IMPORTANTE
+
+La vacunación debe ser planificada por un médico veterinario. Este documento
+contiene principios generales y no reemplaza una evaluación profesional ni
+establece un calendario personalizado para una mascota específica.
+
+==================================================
+OBJETIVO DE LA VACUNACIÓN
+==================================================
+
+La vacunación es una medida preventiva destinada a reducir el riesgo de
+enfermedades infecciosas en perros y gatos.
+
+El plan de vacunación debe ser determinado de manera individual, considerando:
+
+- Especie.
+- Edad.
+- Estado de salud.
+- Antecedentes de vacunación.
+- Estilo de vida.
+- Entorno.
+- Nivel de exposición.
+- Riesgo epidemiológico de la zona.
+- Normativa sanitaria local.
+
+==================================================
+VACUNAS ESENCIALES Y NO ESENCIALES
+==================================================
+
+Las guías distinguen entre vacunas esenciales y vacunas no esenciales.
+
+Las vacunas esenciales protegen frente a enfermedades graves y ampliamente
+distribuidas. Su aplicación debe evaluarse como parte de la atención
+preventiva general.
+
+Las vacunas no esenciales se indican de acuerdo con el riesgo individual,
+el estilo de vida, la ubicación y el nivel de exposición de la mascota.
+
+No todas las mascotas requieren exactamente el mismo esquema.
+
+==================================================
+EVALUACIÓN PROFESIONAL
+==================================================
+
+Antes de vacunar, el médico veterinario debe revisar el estado general del
+paciente y sus antecedentes.
+
+El profesional es responsable de:
+
+- Determinar qué vacunas corresponden.
+- Definir el momento de aplicación.
+- Evaluar antecedentes médicos.
+- Revisar vacunas anteriores.
+- Informar posibles reacciones.
+- Registrar la aplicación en la ficha clínica.
+
+Los tutores deben conservar el carné de vacunación y presentarlo durante
+los controles veterinarios.
+
+==================================================
+RESTRICCIÓN DEL CHATBOT
+==================================================
+
+El chatbot puede informar qué servicios de vacunación ofrece VetCare y
+explicar principios preventivos generales.
+
+El chatbot no puede:
+
+- Crear un calendario personalizado.
+- Confirmar que una vacuna es adecuada para una mascota.
+- Sustituir la revisión de un médico veterinario.
+- Indicar una vacuna basándose solamente en la edad.
+- Garantizar que una mascota se encuentra protegida.
+
+Para recibir una recomendación específica se debe reservar una consulta
+veterinaria.
+
+==================================================
+REFERENCIA
+==================================================
+
+Título: 2024 Guidelines for the Vaccination of Dogs and Cats
+Institución: World Small Animal Veterinary Association
+Sigla: WSAVA
+URL:
+https://wsava.org/global-guidelines/vaccination-guidelines/
+
+Fecha de consulta: 9 de septiembre de 2026

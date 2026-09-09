@@ -1,0 +1,94 @@
+==================================================
+FUENTE EXTERNA - SEGURIDAD EN EL USO DE
+MEDICAMENTOS PARA MASCOTAS
+==================================================
+
+Tipo de fuente: Externa
+Organización responsable: U.S. Food and Drug Administration
+Área: Center for Veterinary Medicine
+Uso: Prototipo académico VetCare
+
+AVISO IMPORTANTE
+
+Ningún medicamento debe administrarse a una mascota sin la evaluación
+y orientación de un médico veterinario. Este documento no contiene dosis,
+recetas ni instrucciones de tratamiento.
+
+==================================================
+MEDICAMENTOS HUMANOS Y MASCOTAS
+==================================================
+
+Los medicamentos utilizados por personas no necesariamente son seguros
+para perros o gatos. Las diferencias entre especies pueden cambiar la
+forma en que el organismo procesa un medicamento.
+
+No se deben administrar medicamentos humanos para el dolor, como
+paracetamol, ibuprofeno, aspirina o naproxeno, sin una indicación expresa
+de un médico veterinario.
+
+Los medicamentos veterinarios también deben ser utilizados exclusivamente
+de acuerdo con la receta y las instrucciones entregadas por el profesional
+que evaluó al paciente.
+
+No se deben reutilizar medicamentos sobrantes de tratamientos anteriores,
+aunque correspondan a la misma mascota o a síntomas aparentemente similares.
+
+No deben entregarse medicamentos prescritos para una mascota a otro animal.
+
+==================================================
+ANTIINFLAMATORIOS Y ANALGÉSICOS
+==================================================
+
+La FDA informa que los antiinflamatorios no esteroideos destinados a perros
+y gatos deben utilizarse bajo supervisión veterinaria.
+
+El profesional debe evaluar previamente factores como:
+
+- Especie de la mascota.
+- Edad.
+- Peso.
+- Estado general de salud.
+- Antecedentes médicos.
+- Otros medicamentos utilizados.
+- Posibles riesgos o reacciones adversas.
+
+El chatbot VetCare no puede realizar esta evaluación y, por lo tanto,
+no debe recomendar medicamentos ni calcular dosis.
+
+==================================================
+INGESTA ACCIDENTAL
+==================================================
+
+Si una mascota consume accidentalmente un medicamento:
+
+- Retira los medicamentos restantes de su alcance.
+- Conserva el envase o fotografía la etiqueta.
+- Registra el nombre del medicamento.
+- Registra la cantidad aproximada ingerida.
+- Registra la hora aproximada del consumo.
+- Comunícate inmediatamente con un servicio veterinario de urgencia.
+- No provoques el vómito sin indicación profesional.
+- No esperes a que aparezcan síntomas.
+
+==================================================
+RESTRICCIÓN DEL CHATBOT
+==================================================
+
+El chatbot debe rechazar cualquier solicitud de dosis, receta,
+prescripción o recomendación de medicamentos.
+
+La respuesta debe indicar que se requiere evaluación veterinaria presencial.
+Si el medicamento ya fue consumido, debe recomendar contacto inmediato con
+un servicio veterinario de urgencia.
+
+==================================================
+REFERENCIA
+==================================================
+
+Título: Get the Facts about Pain Relievers for Pets
+Institución: U.S. Food and Drug Administration
+Área: Center for Veterinary Medicine
+URL:
+https://www.fda.gov/animal-veterinary/animal-health-literacy/get-facts-about-pain-relievers-pets
+
+Fecha de consulta: 9 de septiembre de 2026
