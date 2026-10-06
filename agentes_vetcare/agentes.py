@@ -1,8 +1,12 @@
-from typing import Dict, Any
-from agentes_vetcare.dominio import RespuestaAgente, FichaClinicaPrevia, Cita
+from typing import Dict, Any, Optional
+from agentes_vetcare.dominio import (
+    RespuestaAgente,
+    FichaClinicaPrevia,
+    Cita
+)
 from agentes_vetcare.infraestructura import (
     GestorSesionesJSON,
-    ServicioCorreoSimulado,
+    ServicioCorreoReal,
     ServicioVectorialFAISS,
     Configuracion
 )
@@ -82,10 +86,8 @@ class AgentePreConsulta:
         urgencia = datos_triaje.get("nivel_urgencia", "BAJA")
         sintomas = datos_triaje.get("consulta", "Sin especificar")
 
-        # 1. Recuperación de conocimiento clínico/cuidados usando la Base Vectorial
         contexto_recuperado = self.rag.buscar_informacion(f"cuidados transporte seguridad {especie} {sintomas}")
 
-        # 2. Generación de pautas de transporte y preparación previas
         if especie.lower() in ["gato", "felino"]:
             transporte = "Utilizar caja de transporte rígida y cubierta con manta para reducir estrés."
         else:
@@ -119,7 +121,7 @@ class AgentePreConsulta:
 class AgenteNotificadorCitas:
     """AGENTE 3: Gestión de reserva de hora y envío de correos de confirmación."""
 
-    def __init__(self, servicio_correo: ServicioCorreoSimulado):
+    def __init__(self, servicio_correo: ServicioCorreoReal):
         self.servicio_correo = servicio_correo
 
     def agendar_y_confirmar(self, cita: Cita) -> RespuestaAgente:

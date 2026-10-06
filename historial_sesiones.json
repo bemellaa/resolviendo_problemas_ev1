@@ -66,5 +66,112 @@
         "timestamp": "2026-10-06 16:56:09"
       }
     ]
+  },
+  "ev": {
+    "sesion_97ef": [
+      {
+        "rol": "usuario",
+        "contenido": "a",
+        "timestamp": "2026-10-06 18:34:22"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia BAJA. Consulta general o preventiva.",
+        "timestamp": "2026-10-06 18:34:22"
+      },
+      {
+        "rol": "usuario",
+        "contenido": "a",
+        "timestamp": "2026-10-06 18:34:25"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia BAJA. Consulta general o preventiva.",
+        "timestamp": "2026-10-06 18:34:25"
+      },
+      {
+        "rol": "usuario",
+        "contenido": "s",
+        "timestamp": "2026-10-06 18:34:31"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia BAJA. Consulta general o preventiva.",
+        "timestamp": "2026-10-06 18:34:31"
+      },
+      {
+        "rol": "agente_citas",
+        "contenido": "Cita confirmada exitosamente para el s y correo enviado a ev.",
+        "timestamp": "2026-10-06 18:34:35"
+      }
+    ]
+  },
+  "vetcare.bot.test@gmail.com": {
+    "sesion_769e": [
+      {
+        "rol": "usuario",
+        "contenido": "Se cae el pelo facilmente",
+        "timestamp": "2026-10-06 18:43:27"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia BAJA. Consulta general o preventiva.",
+        "timestamp": "2026-10-06 18:43:27"
+      },
+      {
+        "rol": "agente_citas",
+        "contenido": "Cita confirmada exitosamente para el Miercoles 15:00 y correo enviado a vetcare.bot.test@gmail.com.",
+        "timestamp": "2026-10-06 18:43:54"
+      },
+      {
+        "rol": "usuario",
+        "contenido": "vomitos",
+        "timestamp": "2026-10-06 18:50:18"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia MEDIA. Evaluación dentro de las próximas 24 horas.",
+        "timestamp": "2026-10-06 18:50:18"
+      },
+      {
+        "rol": "agente_citas",
+        "contenido": "Cita confirmada exitosamente para el mañana 15:00 y correo enviado a vetcare.bot.test@gmail.com.",
+        "timestamp": "2026-10-06 18:51:10"
+      }
+    ],
+    "sesion_0b90": [
+      {
+        "rol": "usuario",
+        "contenido": "tiene vomitos",
+        "timestamp": "2026-10-06 18:55:27"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia MEDIA. Evaluación dentro de las próximas 24 horas.",
+        "timestamp": "2026-10-06 18:55:27"
+      },
+      {
+        "rol": "agente_citas",
+        "contenido": "Cita confirmada exitosamente para el Mañana (Miércoles) a las 15:30 hrs y correo enviado a vetcare.bot.test@gmail.com.",
+        "timestamp": "2026-10-06 18:55:58"
+      }
+    ],
+    "sesion_65d2": [
+      {
+        "rol": "usuario",
+        "contenido": "tiene vomitos",
+        "timestamp": "2026-10-06 18:58:49"
+      },
+      {
+        "rol": "agente_triaje",
+        "contenido": "Consulta registrada. Evaluación de triaje: Urgencia MEDIA. Evaluación dentro de las próximas 24 horas.",
+        "timestamp": "2026-10-06 18:58:49"
+      },
+      {
+        "rol": "agente_citas",
+        "contenido": "Cita confirmada exitosamente para el Pasado Mañana (Jueves) a las 11:00 hrs y correo enviado a vetcare.bot.test@gmail.com.",
+        "timestamp": "2026-10-06 18:59:12"
+      }
+    ]
   }
 }

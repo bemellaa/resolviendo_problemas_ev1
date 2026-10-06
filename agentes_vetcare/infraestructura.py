@@ -1,10 +1,13 @@
 import json
 import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Dict, List, Any, Optional
 
-# Carga opcional de librerías vectoriales (FAISS y Embeddings)
+# Carga opcional de librerías vectoriales
 try:
     from langchain_community.vectorstores import FAISS
     from langchain_huggingface import HuggingFaceEmbeddings
@@ -15,15 +18,26 @@ except ImportError:
 
 @dataclass
 class Configuracion:
-    """Carga variables de entorno para los modelos."""
+    """Carga variables de entorno para los modelos y credenciales de correo."""
     api_key: str
     modelo: str
+    email_emisor: str
+    email_password: str
 
     @classmethod
     def desde_entorno(cls) -> "Configuracion":
-        api_key = os.getenv("GROQ_API_KEY", "")
-        modelo = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-        return cls(api_key=api_key, modelo=modelo)
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+        except ImportError:
+            pass
+
+        return cls(
+            api_key=os.getenv("GROQ_API_KEY", ""),
+            modelo=os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
+            email_emisor=os.getenv("EMAIL_EMISOR", ""),
+            email_password=os.getenv("EMAIL_PASSWORD", "")
+        )
 
 
 class GestorSesionesJSON:
@@ -68,58 +82,78 @@ class GestorSesionesJSON:
 
 
 class ServicioVectorialFAISS:
-    """Carga y consulta la base vectorial FAISS existente en el proyecto."""
+    """Carga y consulta la base vectorial FAISS con Lazy Loading (Carga Diferida)."""
 
     def __init__(self, ruta_base_vectorial: str = "base_vectorial_vetcare"):
         self.ruta = ruta_base_vectorial
         self.vector_store = None
-        self._cargar_indice()
+        self._intentado_cargar = False
 
-    def _cargar_indice(self):
+    def _cargar_indice_lazy(self):
+        """Inicializa PyTorch/Embeddings solo cuando se invoca la búsqueda."""
+        if self._intentado_cargar:
+            return
+        self._intentado_cargar = True
+
         if not FAISS_DISPONIBLE:
-            print(" [INFRAESTRUCTURA]: LangChain/FAISS no instalado. Se usará búsqueda de respaldo.")
             return
 
         if os.path.exists(self.ruta):
             try:
-                # Usamos un modelo estándar de HuggingFace para embeddings de contexto
+                print("\n ⏳ [INFRAESTRUCTURA]: Cargando base vectorial FAISS en segundo plano...")
                 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
                 self.vector_store = FAISS.load_local(
                     self.ruta,
                     embeddings,
                     allow_dangerous_deserialization=True
                 )
-                print(f" [INFRAESTRUCTURA]: Base Vectorial FAISS cargada exitosamente desde '{self.ruta}'.")
+                print(" ✅ [INFRAESTRUCTURA]: Base Vectorial FAISS lista para consultas.\n")
             except Exception as e:
-                print(f" ⚠️ [INFRAESTRUCTURA]: Error al cargar FAISS ({e}). Usando modo seguro.")
-        else:
-            print(f" ⚠️ [INFRAESTRUCTURA]: No se encontró el directorio '{self.ruta}'.")
+                print(f" ⚠️ [INFRAESTRUCTURA]: Error al cargar FAISS ({e}). Usando respuesta de respaldo.")
 
     def buscar_informacion(self, consulta: str, k: int = 2) -> str:
-        """Realiza búsqueda por similitud en la base vectorial de VetCare."""
+        # Carga perezosa del modelo pesado al momento de la búsqueda
+        self._cargar_indice_lazy()
+        
         if self.vector_store:
             docs = self.vector_store.similarity_search(consulta, k=k)
             return "\n".join([doc.page_content for doc in docs])
         
-        # Respuesta de respaldo en caso de no tener FAISS cargado en memoria
         return (
             "Pautas generales: Mantener a la mascota tranquila, evitar administración "
             "de fármacos sin indicación médica presencial y transportar en kennel seguro."
         )
 
 
-class ServicioCorreoSimulado:
-    """Servicio de infraestructura para el envío de correos de confirmación."""
+class ServicioCorreoReal:
+    """Servicio de infraestructura para el envío REAL de correos mediante SMTP Gmail."""
 
-    @staticmethod
-    def enviar_correo(destinatario: str, asunto: str, cuerpo: str) -> bool:
-        print("\n" + "=" * 60)
-        print(" ✉️  [SERVICIO SMTP DE INFRAESTRUCTURA - CORREO SALIENTE]")
-        print(f" Para: {destinatario}")
-        print(f" Asunto: {asunto}")
-        print("------------------------------------------------------------")
-        print(cuerpo)
-        print("------------------------------------------------------------")
-        print(" ✅ Estado: Correo entregado al servidor de destino correctamente.")
-        print("=" * 60 + "\n")
-        return True
+    def __init__(self, config: Configuracion):
+        self.emisor = config.email_emisor
+        self.password = config.email_password
+
+    def enviar_correo(self, destinatario: str, asunto: str, cuerpo: str) -> bool:
+        if not self.emisor or not self.password:
+            print("\n ⚠️  [SMTP]: No se detectaron credenciales en .env. Imprimiendo simulación en consola:")
+            print(f" Para: {destinatario}\n Asunto: {asunto}\n{cuerpo}\n")
+            return True
+
+        try:
+            msg = MIMEMultipart()
+            msg['From'] = self.emisor
+            msg['To'] = destinatario
+            msg['Subject'] = asunto
+            msg.attach(MIMEText(cuerpo, 'plain', 'utf-8'))
+
+            servidor = smtplib.SMTP("smtp.gmail.com", 587)
+            servidor.starttls()
+            servidor.login(self.emisor, self.password)
+            servidor.send_message(msg)
+            servidor.quit()
+
+            print(f"\n ✉️  [SMTP REAL]: ¡Correo electrónico enviado con éxito a '{destinatario}'!")
+            return True
+
+        except Exception as e:
+            print(f"\n ❌ [SMTP ERROR]: Falló el envío del correo real: {e}")
+            return False
