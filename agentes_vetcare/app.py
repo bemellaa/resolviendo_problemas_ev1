@@ -8,7 +8,9 @@ from agentes_vetcare.infraestructura import (
     Configuracion,
     GestorSesionesJSON,
     ServicioCorreoReal,
-    ServicioVectorialFAISS
+    ServicioVectorialFAISS,
+    ServicioIndicadoresEconomicos,
+    ServicioGeneradorQR
 )
 from agentes_vetcare.agentes import (
     AgenteTriajeYMemoria,
@@ -19,11 +21,16 @@ from agentes_vetcare.dominio import Cita
 
 
 # ==============================================================================
-# FUNCIONES AUXILIARES DE VALIDACIÓN (INPUT GUARDRAILS)
+# VALIDACIONES DE ENTRADA (GUARDRAILS)
 # ==============================================================================
 
+ESPECIES_PERMITIDAS = [
+    "perro", "perra", "gato", "gata", "conejo", "coneja", 
+    "huron", "hurón", "ave", "pajaro", "pájaro", "cobaya", 
+    "hamster", "hámster", "tortuga", "erizo"
+]
+
 def pedir_correo_valido() -> str:
-    """Solicita un correo electrónico y valida su estructura con Regex."""
     patron = r'^[\w\.-]+@[\w\.-]+\.\w+$'
     while True:
         correo = input("👉 Ingrese su correo electrónico: ").strip().lower()
@@ -33,7 +40,6 @@ def pedir_correo_valido() -> str:
 
 
 def pedir_texto_valido(prompt: str, min_len: int = 2, campo: str = "texto") -> str:
-    """Valida que la entrada no esté vacía y tenga una longitud mínima."""
     while True:
         valor = input(prompt).strip()
         if len(valor) >= min_len and any(c.isalpha() for c in valor):
@@ -41,8 +47,16 @@ def pedir_texto_valido(prompt: str, min_len: int = 2, campo: str = "texto") -> s
         print(f" ❌ Entrada no válida para '{campo}'. Debe contener al menos {min_len} letras.")
 
 
+def pedir_especie_valida() -> str:
+    """Valida que la mascota sea una especie doméstica atendida por la clínica."""
+    while True:
+        especie = input("👉 Especie (ej. Perro, Gato, Conejo): ").strip().lower()
+        if especie in ESPECIES_PERMITIDAS:
+            return especie.capitalize()
+        print(" ❌ Especie no admitida. VetCare atiende únicamente especies domésticas (Perro, Gato, Conejo, Hurón, Ave, Cobaya, Hámster, Tortuga).")
+
+
 def pedir_confirmacion_si_no(prompt: str) -> bool:
-    """Exige una respuesta clara entre Sí (s) o No (n)."""
     while True:
         respuesta = input(prompt).strip().lower()
         if respuesta in ["s", "si", "sí", "yes", "y"]:
@@ -53,27 +67,28 @@ def pedir_confirmacion_si_no(prompt: str) -> bool:
 
 
 def seleccionar_horario_disponible() -> str:
-    """Muestra 3 bloques horarios disponibles y exige elegir 1, 2 o 3."""
-    horarios = {
+    opciones = {
         "1": "Mañana (Miércoles) a las 10:00 hrs",
         "2": "Mañana (Miércoles) a las 15:30 hrs",
         "3": "Pasado Mañana (Jueves) a las 11:00 hrs"
     }
 
     print("\n" + "📅 HORARIOS DISPONIBLES EN CENTRO VETCARE:")
-    for clave, horario in horarios.items():
+    for clave, horario in opciones.items():
         print(f"   [{clave}] {horario}")
     print("-" * 50)
 
     while True:
-        opcion = input("👉 Seleccione el número de su preferencia (1, 2 o 3): ").strip()
-        if opcion in horarios:
-            return horarios[opcion]
+        eleccion = input("👉 Seleccione el número de su preferencia (1, 2 o 3): ").strip()
+        if eleccion in opciones:
+            horario_seleccionado = opciones[eleccion]
+            print(f" ✅ Horario reservado: {horario_seleccionado}")
+            return horario_seleccionado
         print(" ❌ Selección fuera de rango. Por favor ingrese solo 1, 2 o 3.")
 
 
 # ==============================================================================
-# BUCLE PRINCIPAL DE LA APLICACIÓN
+# BUCLE PRINCIPAL
 # ==============================================================================
 
 def iniciar_chat_interactivo():
@@ -81,27 +96,23 @@ def iniciar_chat_interactivo():
     print("       CENTRO VETERINARIO VETCARE - SISTEMA MULTI-AGENTE")
     print("=" * 70)
 
-    # 1. Cargar configuración e informar estado de credenciales
     config = Configuracion.desde_entorno()
-    
-    if config.email_emisor and config.email_password:
+    if config.email_emisor:
         print(f" 🔑 [SISTEMA]: Credenciales SMTP detectadas para: {config.email_emisor}")
-    else:
-        print(" ⚠️  [SISTEMA]: No se leyeron credenciales en .env. Verifique 'python-dotenv'.")
 
-    # 2. Inicializar Infraestructura y Agentes
     gestor_sesiones = GestorSesionesJSON("historial_sesiones.json")
     servicio_correo = ServicioCorreoReal(config)
     servicio_rag = ServicioVectorialFAISS("base_vectorial_vetcare")
+    servicio_uf = ServicioIndicadoresEconomicos()
+    servicio_qr = ServicioGeneradorQR()
 
     agente_1 = AgenteTriajeYMemoria(gestor_sesiones, config)
-    agente_2 = AgentePreConsulta(servicio_rag, config)
-    agente_3 = AgenteNotificadorCitas(servicio_correo)
+    agente_2 = AgentePreConsulta(servicio_rag, servicio_uf, config)
+    agente_3 = AgenteNotificadorCitas(servicio_correo, servicio_qr)
 
     print("\nBienvenido al portal de atención VetCare.")
     correo_cliente = pedir_correo_valido()
 
-    # Gestión de Memoria / Historial
     ingreso = agente_1.gestionar_ingreso_cliente(correo_cliente)
     
     if ingreso["tiene_historial"]:
@@ -121,7 +132,7 @@ def iniciar_chat_interactivo():
         print(f"\n✨ {ingreso['mensaje']} (ID de sesión: {id_sesion})")
 
     nombre_mascota = pedir_texto_valido("👉 Nombre de su mascota: ", min_len=2, campo="Nombre de mascota")
-    especie_mascota = pedir_texto_valido("👉 Especie (ej. Perro, Gato, Conejo): ", min_len=3, campo="Especie")
+    especie_mascota = pedir_especie_valida()
 
     print("\n" + "=" * 70)
     print(" Puede escribir sus síntomas o la razón de su consulta.")
@@ -139,11 +150,9 @@ def iniciar_chat_interactivo():
             print(" ❌ Por favor, describa los síntomas con más detalle (ej: 'tiene tos y vomita').")
             continue
 
-        # AGENTE 1: Triaje
         res_triaje = agente_1.procesar_consulta(correo_cliente, id_sesion, consulta)
         print(f"\n🤖 [{res_triaje.agente_emisor}]: {res_triaje.contenido}")
 
-        # AGENTE 2: Pre-Consulta (RAG)
         res_preconsulta = agente_2.elaborar_ficha(
             datos_triaje=res_triaje.datos_extra,
             especie=especie_mascota,
@@ -151,7 +160,6 @@ def iniciar_chat_interactivo():
         )
         print(f"🤖 [{res_preconsulta.agente_emisor}]: {res_preconsulta.contenido}")
 
-        # AGENTE 3: Reserva con selección de bloque horario (1, 2 o 3)
         desea_agendar = pedir_confirmacion_si_no("\n¿Desea agendar una cita presencial para este caso? (s/n): ")
         
         if desea_agendar:

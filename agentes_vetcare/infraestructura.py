@@ -1,6 +1,8 @@
 import json
 import os
 import smtplib
+import urllib.request
+import urllib.parse
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
@@ -33,10 +35,10 @@ class Configuracion:
             pass
 
         return cls(
-            api_key=os.getenv("GROQ_API_KEY", ""),
-            modelo=os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
-            email_emisor=os.getenv("EMAIL_EMISOR", ""),
-            email_password=os.getenv("EMAIL_PASSWORD", "")
+            api_key=os.getenv("GROQ_API_KEY", "").strip(),
+            modelo=os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip(),
+            email_emisor=os.getenv("EMAIL_EMISOR", "").strip(),
+            email_password=os.getenv("EMAIL_PASSWORD", "").replace(" ", "").strip()
         )
 
 
@@ -82,7 +84,7 @@ class GestorSesionesJSON:
 
 
 class ServicioVectorialFAISS:
-    """Carga y consulta la base vectorial FAISS con Lazy Loading (Carga Diferida)."""
+    """Carga y consulta la base vectorial FAISS con Lazy Loading."""
 
     def __init__(self, ruta_base_vectorial: str = "base_vectorial_vetcare"):
         self.ruta = ruta_base_vectorial
@@ -90,7 +92,6 @@ class ServicioVectorialFAISS:
         self._intentado_cargar = False
 
     def _cargar_indice_lazy(self):
-        """Inicializa PyTorch/Embeddings solo cuando se invoca la búsqueda."""
         if self._intentado_cargar:
             return
         self._intentado_cargar = True
@@ -112,31 +113,55 @@ class ServicioVectorialFAISS:
                 print(f" ⚠️ [INFRAESTRUCTURA]: Error al cargar FAISS ({e}). Usando respuesta de respaldo.")
 
     def buscar_informacion(self, consulta: str, k: int = 2) -> str:
-        # Carga perezosa del modelo pesado al momento de la búsqueda
         self._cargar_indice_lazy()
-        
         if self.vector_store:
             docs = self.vector_store.similarity_search(consulta, k=k)
             return "\n".join([doc.page_content for doc in docs])
-        
-        return (
-            "Pautas generales: Mantener a la mascota tranquila, evitar administración "
-            "de fármacos sin indicación médica presencial y transportar en kennel seguro."
-        )
+        return "Mantener a la mascota tranquila y libre de estrés durante el traslado."
+
+
+# ==============================================================================
+# INTEGRACIÓN DE APIS EXTERNAS
+# ==============================================================================
+
+class ServicioIndicadoresEconomicos:
+    """API EXTERNA 1: Consulta en tiempo real el valor de la UF desde mindicador.cl."""
+
+    def obtener_valor_uf(self) -> float:
+        try:
+            url = "https://mindicador.cl/api"
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=3) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                valor_uf = float(data.get('uf', {}).get('valor', 38000.0))
+                print(f" 🌐 [API EXTERNA mindicador.cl]: Valor UF obtenido en tiempo real: ${valor_uf:,.2f} CLP")
+                return valor_uf
+        except Exception:
+            print(" ⚠️ [API EXTERNA]: No se pudo conectar a mindicador.cl. Usando valor estimado de respaldo.")
+            return 38500.0
+
+
+class ServicioGeneradorQR:
+    """API EXTERNA 2: Genera un pase de atención con código QR único mediante qrserver.com."""
+
+    def generar_url_qr(self, resumen_cita: str) -> str:
+        texto_encodeado = urllib.parse.quote(resumen_cita)
+        url_qr = f"https://api.qrserver.com/v1/create-qr-code/?size=250x250&data={texto_encodeado}"
+        print(" 🌐 [API EXTERNA qrserver.com]: Enlace de pase QR generado con éxito.")
+        return url_qr
 
 
 class ServicioCorreoReal:
-    """Servicio de infraestructura para el envío REAL de correos mediante SMTP Gmail."""
+    """Servicio de infraestructura para el envío REAL de correos mediante SMTP SSL Gmail (Puerto 465)."""
 
     def __init__(self, config: Configuracion):
         self.emisor = config.email_emisor
         self.password = config.email_password
 
     def enviar_correo(self, destinatario: str, asunto: str, cuerpo: str) -> bool:
-        if not self.emisor or not self.password:
-            print("\n ⚠️  [SMTP]: No se detectaron credenciales en .env. Imprimiendo simulación en consola:")
-            print(f" Para: {destinatario}\n Asunto: {asunto}\n{cuerpo}\n")
-            return True
+        if not self.emisor or not self.password or "tu_correo" in self.emisor:
+            print("\n ⚠️  [SMTP]: Credenciales incompletas en .env.")
+            return False
 
         try:
             msg = MIMEMultipart()
@@ -145,11 +170,9 @@ class ServicioCorreoReal:
             msg['Subject'] = asunto
             msg.attach(MIMEText(cuerpo, 'plain', 'utf-8'))
 
-            servidor = smtplib.SMTP("smtp.gmail.com", 587)
-            servidor.starttls()
-            servidor.login(self.emisor, self.password)
-            servidor.send_message(msg)
-            servidor.quit()
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as servidor:
+                servidor.login(self.emisor, self.password)
+                servidor.send_message(msg)
 
             print(f"\n ✉️  [SMTP REAL]: ¡Correo electrónico enviado con éxito a '{destinatario}'!")
             return True

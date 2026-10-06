@@ -8,18 +8,13 @@ from agentes_vetcare.infraestructura import (
     GestorSesionesJSON,
     ServicioCorreoReal,
     ServicioVectorialFAISS,
+    ServicioIndicadoresEconomicos,
+    ServicioGeneradorQR,
     Configuracion
 )
 
 
 class AgenteTriajeYMemoria:
-    """AGENTE 1: Recepción, gestión de historial de chats y clasificación de urgencia."""
-
-    PROMPT_SISTEMA = (
-        "Eres el Agente de Triaje de VetCare. Tu función es recibir al cliente, "
-        "gestionar su historial de atención previo y clasificar el nivel de urgencia."
-    )
-
     def __init__(self, gestor_sesiones: GestorSesionesJSON, config: Configuracion):
         self.gestor = gestor_sesiones
         self.config = config
@@ -48,12 +43,10 @@ class AgenteTriajeYMemoria:
         self.gestor.guardar_mensaje(correo, id_sesion, "usuario", mensaje_usuario)
 
         mensaje_lower = mensaje_usuario.lower()
-        palabras_criticas = ["sangre", "convulsion", "atropellado", "no respira", "inconsciente"]
-        
-        if any(p in mensaje_lower for p in palabras_criticas):
+        if any(p in mensaje_lower for p in ["sangre", "convulsion", "atropellado", "no respira"]):
             urgencia = "ALTA (URGENCIA MÉDICA)"
             indicacion = "Atención prioritaria inmediata recomendada."
-        elif any(p in mensaje_lower for p in ["vomito", "diarrea", "decai", "no come", "fiebre"]):
+        elif any(p in mensaje_lower for p in ["vomito", "vomitos", "diarrea", "decai", "no come", "fiebre"]):
             urgencia = "MEDIA"
             indicacion = "Evaluación dentro de las próximas 24 horas."
         else:
@@ -76,10 +69,9 @@ class AgenteTriajeYMemoria:
 
 
 class AgentePreConsulta:
-    """AGENTE 2: Genera la Ficha Pre-Clínica apoyándose en RAG (Base Vectorial FAISS)."""
-
-    def __init__(self, servicio_rag: ServicioVectorialFAISS, config: Configuracion):
+    def __init__(self, servicio_rag: ServicioVectorialFAISS, servicio_uf: ServicioIndicadoresEconomicos, config: Configuracion):
         self.rag = servicio_rag
+        self.servicio_uf = servicio_uf
         self.config = config
 
     def elaborar_ficha(self, datos_triaje: dict, especie: str, nombre_mascota: str) -> RespuestaAgente:
@@ -87,8 +79,11 @@ class AgentePreConsulta:
         sintomas = datos_triaje.get("consulta", "Sin especificar")
 
         contexto_recuperado = self.rag.buscar_informacion(f"cuidados transporte seguridad {especie} {sintomas}")
+        valor_uf = self.servicio_uf.obtener_valor_uf()
+        arancel_clp = 35000
+        equivalencia_uf = arancel_clp / valor_uf if valor_uf > 0 else 0.85
 
-        if especie.lower() in ["gato", "felino"]:
+        if especie.lower() in ["gato", "gata", "felino"]:
             transporte = "Utilizar caja de transporte rígida y cubierta con manta para reducir estrés."
         else:
             transporte = "Llevar con arnés/correa corta y bozal si presenta dolor o inquietud."
@@ -96,8 +91,8 @@ class AgentePreConsulta:
         indicaciones = (
             f"1. {transporte}\n"
             f"2. Mantener en reposo sin administrar fármacos de uso humano o veterinario sin orden presencial.\n"
-            f"3. Pauta basada en base de conocimiento: {contexto_recuperado[:120]}...\n"
-            f"4. Traer carnet de vacunación y registro de atenciones previas."
+            f"3. Pauta RAG base conocimiento: {contexto_recuperado[:120]}...\n"
+            f"4. Arancel estimado consulta presencial: $35.000 CLP (~{equivalencia_uf:.2f} UF para seguro médico)."
         )
 
         ficha = FichaClinicaPrevia(
@@ -110,7 +105,7 @@ class AgentePreConsulta:
 
         return RespuestaAgente(
             agente_emisor="Agente 2 (Pre-Consulta y Ficha Clínica)",
-            contenido=f"Ficha pre-clínica elaborada para '{nombre_mascota}' incorporando RAG de la base vectorial.",
+            contenido=f"Ficha pre-clínica elaborada para '{nombre_mascota}' ({especie}) incorporando RAG y cotización UF ({equivalencia_uf:.2f} UF).",
             datos_extra={
                 "ficha": ficha,
                 "indicaciones_previas": indicaciones
@@ -119,23 +114,42 @@ class AgentePreConsulta:
 
 
 class AgenteNotificadorCitas:
-    """AGENTE 3: Gestión de reserva de hora y envío de correos de confirmación."""
-
-    def __init__(self, servicio_correo: ServicioCorreoReal):
+    def __init__(self, servicio_correo: ServicioCorreoReal, servicio_qr: ServicioGeneradorQR):
         self.servicio_correo = servicio_correo
+        self.servicio_qr = servicio_qr
 
     def agendar_y_confirmar(self, cita: Cita) -> RespuestaAgente:
+        # Formato de Ticket Digital estructurado para lectura móvil
+        ticket_qr_texto = (
+            "========================================\n"
+            "   🏥 CENTRO MÉDICO VETCARE             \n"
+            "   🎫 TICKET DIGITAL DE CHECK-IN        \n"
+            "========================================\n"
+            f"🐾 Mascota: {cita.mascota}\n"
+            f"📅 Fecha/Hora: {cita.fecha_hora}\n"
+            f"📧 Tutor: {cita.correo}\n"
+            f"📋 Motivo: {cita.motivo[:30]}\n"
+            "========================================\n"
+            " STATUS: RESERVA CONFIRMADA EN SISTEMA   \n"
+            " Presente este ticket en recepción.     \n"
+            "========================================"
+        )
+
+        url_qr = self.servicio_qr.generar_url_qr(ticket_qr_texto)
+
         asunto = f"Confirmación de Cita Veterinaria - {cita.mascota}"
         
         cuerpo = (
-            f"Estimado/a {cita.dueno},\n\n"
+            f"Estimado/a Cliente VetCare,\n\n"
             f"Confirmamos la reserva de su cita veterinaria presencial con el equipo de VetCare.\n\n"
-            f" 🗓️  Mascota: {cita.mascota}\n"
+            f" 🗓  Mascota: {cita.mascota}\n"
             f" 📅 Fecha y Hora: {cita.fecha_hora}\n"
             f" 📋 Motivo de Consulta: {cita.motivo}\n\n"
+            f" 📲 SU PASE DE ATENCIÓN DIGITAL / CÓDIGO QR:\n"
+            f" Muestre el siguiente código QR desde su celular al llegar a la recepción:\n"
+            f" {url_qr}\n\n"
             f" ⚠️ INSTRUCCIONES DE PREPARACIÓN Y SEGURIDAD:\n"
-            f"{cita.indicaciones_previas or 'Llegar 10 minutos antes de la hora acordada.'}\n\n"
-            f"La ficha clínica previa ya ha sido cargada en nuestro sistema para la revisión del veterinario.\n\n"
+            f"{cita.indicaciones_previas}\n\n"
             f"Atentamente,\n"
             f"Centro Médico Veterinario VetCare"
         )
@@ -148,6 +162,6 @@ class AgenteNotificadorCitas:
 
         return RespuestaAgente(
             agente_emisor="Agente 3 (Gestión de Citas y Correos)",
-            contenido=f"Cita confirmada exitosamente para el {cita.fecha_hora} y correo enviado a {cita.correo}.",
+            contenido=f"Cita confirmada para el {cita.fecha_hora}. Se adjuntó pase QR y correo enviado a {cita.correo}.",
             exitoso=exito
         )
